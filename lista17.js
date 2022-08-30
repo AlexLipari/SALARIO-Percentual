@@ -2,32 +2,35 @@ var nome
 var salario = 0
 var percentualAumento = 0
 var salarioComAumento = 0
-
-
-dadosDoColaborador()   
-percentualAumento = calcularPorcentagem(salario)
-salarioComAumento = calcularAumento(salario, percentualAumento)
-console.log (nome , "R$" , salario , "%" , percentualAumento , "R$" , salarioComAumento)
-
-
+var continuar = 0
+while (continuar == 1) {
+    dadosDoColaborador()
+    percentualAumento = calcularPorcentagem(salario)
+    salarioComAumento = calcularAumento(salario, percentualAumento)
+    console.log(nome, "R$", salario, "%", percentualAumento, "R$", salarioComAumento)
+    continuar = desejaContinuar()
+}
+function desejaContinuar() {
+    return prompt("deseja continuar? (1) SIM (2 NÃO")
+}
 function dadosDoColaborador() {
     nome = prompt("Insira seu nome:")
     salario = parseFloat(prompt("Insira o valor de salário:"))
 }
 function calcularPorcentagem(parametroSalario) {
     if (parametroSalario <= 1500) {
-        percentualAumento = 20
+        return 20
     } else if (parametroSalario <= 2000) {
-        percentualAumento = 15
+        return 15
     } else if (parametroSalario <= 3000) {
-        percentualAumento = 10
+        return 10
     } else {
-        percentualAumento = 5
+        return 5
     }
 }
 
 function calcularAumento(parametroSalario, parametroAumento) {
-return parametroSalario + (parametroSalario * (parametroAumento / 100))
+    return parametroSalario + (parametroSalario * (parametroAumento / 100))
 }
 
 
