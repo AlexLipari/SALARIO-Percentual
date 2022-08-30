@@ -4,9 +4,10 @@ var percentualAumento = 0
 var salarioComAumento = 0
 
 
-dadosDoColaborador()
+dadosDoColaborador()   
 percentualAumento = calcularPorcentagem(salario)
 salarioComAumento = calcularAumento(salario, percentualAumento)
+console.log (nome , "R$" , salario , "%" , percentualAumento , "R$" , salarioComAumento)
 
 
 function dadosDoColaborador() {
