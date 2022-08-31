@@ -2,7 +2,7 @@ var nome
 var salario = 0
 var percentualAumento = 0
 var salarioComAumento = 0
-var continuar = 0
+var continuar = 1
 while (continuar == 1) {
     dadosDoColaborador()
     percentualAumento = calcularPorcentagem(salario)
@@ -11,7 +11,7 @@ while (continuar == 1) {
     continuar = desejaContinuar()
 }
 function desejaContinuar() {
-    return prompt("deseja continuar? (1) SIM (2 NÃO")
+    return prompt("deseja continuar? (1) SIM (2) NÃO")
 }
 function dadosDoColaborador() {
     nome = prompt("Insira seu nome:")
